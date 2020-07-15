@@ -1,0 +1,33 @@
+.line {
+text-decoration: line-through;
+}
+.back{
+  background: url(./images/bg_1.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+}
+@media screen and (max-width: 670px){
+.back,.back1{
+ min-height: 150px !important;
+}
+}
+.vehicle-details__label{
+  font-weight:bold;
+}
+.here{
+  margin:0px !important
+
+}
+.back1{
+  background: url(./images/img_2.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  }
+  .back2{
+    background: url(./images/img_3.jpg);
+    }
+    .back3{
+      background: url(./images/img_4.jpg);
+      }

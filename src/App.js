@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{Component} from 'react';
+import NavigationMenues from './components/NavigationMenues';
+import {BrowserRouter,Route} from 'react-router-dom'
+import Home from './components/Home'
+import ContactUs from './components/ContactUs'
+import AboutUs from './components/AboutUs'
+//import Make_Request from './components/Make_Request'
 
-function App() {
+class App extends Component {
+
+ render(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="onecandidate-app container">
+         <BrowserRouter>
+           <NavigationMenues />
+           <Route exact path='/' component={Home}></Route>
+           <Route  path='/AboutUs' component={AboutUs}></Route>
+           <Route  path='/ContactUs' component={ContactUs}></Route>
+        
+         </BrowserRouter>
+
+      </div>
   );
-}
+}}
 
 export default App;
